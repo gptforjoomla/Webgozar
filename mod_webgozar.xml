@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.1" client="site" method="upgrade">
+<extension type="module" client="site" method="upgrade">
 	<name>mod_webgozar</name>
 	<author>Mohammad Hasani Eghtedar</author>
 	<creationDate>January 2014</creationDate>
-	<copyright>Copyright (C) 2014 - 2015 Open Source Matters. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2014 - 2026 Open Source Matters. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>m.h.eghtedar@gmail.com</authorEmail>
-	<authorUrl>www.mhehm.ir</authorUrl>
-	<version>1.0.1</version>
+	<authorUrl>https://www.mhehm.ir</authorUrl>
+	<version>2.0.0</version>
 	<description>MOD_WEBGOZAR_XML_DESCRIPTION</description>
+
 	<files>
 		<filename module="mod_webgozar">mod_webgozar.php</filename>
 		<folder>tmpl</folder>
 		<filename>mod_webgozar.xml</filename>
 	</files>
+
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.mod_webgozar.ini</language>
 		<language tag="en-GB">en-GB/en-GB.mod_webgozar.sys.ini</language>
 		<language tag="fa-IR">fa-IR/fa-IR.mod_webgozar.ini</language>
 		<language tag="fa-IR">fa-IR/fa-IR.mod_webgozar.sys.ini</language>
 	</languages>
+
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
@@ -28,19 +31,22 @@
 					type="list"
 					default="counter"
 					label="MOD_WEBGOZAR_FIELD_TYPE_LABEL"
-					description="MOD_WEBGOZAR_FIELD_TYPE_DESC">
+					description="MOD_WEBGOZAR_FIELD_TYPE_DESC"
+				>
 					<option value="counter">MOD_WEBGOZAR_VALUE_COUNTER</option>
 					<option value="poll">MOD_WEBGOZAR_VALUE_POLL</option>
 					<option value="newsletter">MOD_WEBGOZAR_VALUE_NEWSLETTER</option>
 				</field>
 				<field
 					name="code"
-					type="text"
+					type="number"
 					required="true"
-					pattern="[0-9]+"
+					min="1"
+					step="1"
 					class="validate-numeric ltr"
 					label="MOD_WEBGOZAR_FIELD_CODE_LABEL"
-					description="MOD_WEBGOZAR_FIELD_CODE_DESC" />
+					description="MOD_WEBGOZAR_FIELD_CODE_DESC"
+				/>
 				<field
 					name="counter"
 					type="radio"
@@ -48,7 +54,8 @@
 					showon="type:counter"
 					class="btn-group"
 					label="MOD_WEBGOZAR_FIELD_COUNTER_LABEL"
-					description="MOD_WEBGOZAR_FIELD_COUNTER_DESC">
+					description="MOD_WEBGOZAR_FIELD_COUNTER_DESC"
+				>
 					<option value="1">JSHOW</option>
 					<option value="0">JHIDE</option>
 				</field>
@@ -59,7 +66,8 @@
 					showon="type:newsletter"
 					class="btn-group"
 					label="MOD_WEBGOZAR_FIELD_NEWSLETTER_LABEL"
-					description="MOD_WEBGOZAR_FIELD_NEWSLETTER_DESC">
+					description="MOD_WEBGOZAR_FIELD_NEWSLETTER_DESC"
+				>
 					<option value="v">MOD_WEBGOZAR_VALUE_VERTICAL</option>
 					<option value="h">MOD_WEBGOZAR_VALUE_HORIZONTAL</option>
 				</field>
@@ -69,18 +77,25 @@
 					name="layout"
 					type="modulelayout"
 					label="JFIELD_ALT_LAYOUT_LABEL"
-					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
 				<field
 					name="moduleclass_sfx"
 					type="textarea"
 					rows="3"
 					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
 				<field
 					name="cache"
 					type="hidden"
-					default="0" />
+					default="0"
+				/>
 			</fieldset>
 		</fields>
 	</config>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Webgozar Module Updates">https://raw.githubusercontent.com/mhehm/Webgozar/main/update.xml</server>
+	</updateservers>
 </extension>
