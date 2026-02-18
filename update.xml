@@ -2,38 +2,20 @@
 <updates>
 	<update>
 		<name>Webgozar Module</name>
-		<description>This Module shows Webgozar tools (Poll, Counter, Newsletter) in your site. You must register in www.webgozar.com and create your desired tool and get it's code.</description>
+		<description>Displays Webgozar tools (Poll, Counter, Newsletter) on your site.</description>
 		<element>mod_webgozar</element>
 		<type>module</type>
-		<version>1.0.1</version>
-		<infourl title="Webgozar Module">http://extensions.joomla.org/extensions/extension/site-management/analytics/webgozar</infourl>
+		<version>2.0.0</version>
+		<infourl title="Webgozar Module">https://extensions.joomla.org/extensions/extension/site-management/analytics/webgozar</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/mhehm/Webgozar/archive/1.0.1.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/mhehm/Webgozar/archive/refs/tags/2.0.0.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
 		</tags>
 		<maintainer>Mohammad Hasani Eghtedar</maintainer>
-		<maintainerurl>http://www.mhehm.ir</maintainerurl>
+		<maintainerurl>https://www.mhehm.ir</maintainerurl>
 		<section>frs</section>
-		<targetplatform name="joomla" version="2.5" />
-	</update>
-	<update>
-		<name>Webgozar Module</name>
-		<description>This Module shows Webgozar tools (Poll, Counter, Newsletter) in your site. You must register in www.webgozar.com and create your desired tool and get it's code.</description>
-		<element>mod_webgozar</element>
-		<type>module</type>
-		<version>1.0.1</version>
-		<infourl title="Webgozar Module">http://extensions.joomla.org/extensions/extension/site-management/analytics/webgozar</infourl>
-		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/mhehm/Webgozar/archive/1.0.1.zip</downloadurl>
-		</downloads>
-		<tags>
-			<tag>stable</tag>
-		</tags>
-		<maintainer>Mohammad Hasani Eghtedar</maintainer>
-		<maintainerurl>http://www.mhehm.ir</maintainerurl>
-		<section>frs</section>
-		<targetplatform name="joomla" version="3.0" />
+		<targetplatform name="joomla" version="6.0" />
 	</update>
 </updates>
